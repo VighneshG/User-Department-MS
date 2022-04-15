@@ -8,11 +8,11 @@ with features:
               
 
 **Department Microservice**
-  - [POST, Get]: Department.class 
+  - Operations: POST, Get: Department.class 
   - POST: Department Details --> DepartmentId gets generated
   - GET: /departments/{departmentId} --> To fetch department details from departmentId
 
 **User Microservice**
-  - [POST, GET] 
+  - Operations: POST, GET: User.class
   - POST: User Details (Contains departmentId) --> UserId auto generated
   - GET: User+Department Details from userId --> /users/{userId}
