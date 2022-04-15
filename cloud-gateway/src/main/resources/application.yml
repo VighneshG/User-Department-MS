@@ -1,0 +1,21 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: CLOUD-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/users/**
+        - id: DEPARTMENT-SERVICE
+          uri: lb://DEPARTMENT-SERVICE
+          predicates:
+            - Path=/departments/**
+    config:
+      enabled: true
+  config:
+    import: configserver:http://localhost:9000

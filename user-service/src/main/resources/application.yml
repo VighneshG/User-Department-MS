@@ -1,0 +1,11 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: USER-SERVICE
+  cloud:
+    config:
+      enabled: true
+  config:
+    import: configserver:http://localhost:9000
